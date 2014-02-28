@@ -1,0 +1,46 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="Trees grow almost everywhere except in permanent ice and snow, on the tops of high mountains and in deserts. If an empty piece of land is left to itself for long enough, after some time trees will start to grow. At first, the ground is covered with low plants. Later, bushes grow and in their shade, some of the lower plants that had established themselves first, then die. When still more time has passed, trees start to grow. As they grow bigger, some of the bushes are caught in the shade of the bigger trees and die. In this way, a forest develops over time. Most trees grow slowly, and a number of them can become very old. When old trees die, young ones appear that take their place. Forests are a habitat that can exist for a very long time without changing. It depends on the climate which trees can be found in a certain area.";
+		setTimeout(function(){$("#text").hide()},50000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},51000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
+
+

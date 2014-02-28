@@ -1,0 +1,46 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="Animals and plants that live in areas with a cold or temperate climate have to find ways and means to survive the winter months. Many plants hibernate in the form of seeds which will then shoot in spring and develop into new plants. There are other plants whose parts above the ground die, and as it gets warmer in spring they form new shoots again. Many trees and bushes lose their leaves in autumn and have a resting period during winter. Because animals move around, they consume substantially more energy than plants. Most animals survive winter without changing their usual way of life. But there are also a number of animals that have to take special precautions so that they will not freeze to death. Some birds have solved this problem by flying away in autumn to spend the winter months in more pleasant areas in the south.";
+		setTimeout(function(){$("#text").hide()},50000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},51000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="In the past, it was assumed that spiders were somehow able to protect themselves from the sticky substance in their own nets, while flies and other insects did not have this protection. But new scientific findings show that this is not true. A spider would also get caught in its net if it did not make use of a clever trick. Spiders can produce two different kinds of threads. Thus, spiders first build a net out of dry threads which do not stick. When this net is finished, the spider spins the sticky material on top of it. Only this net on top of the net catches the insects that land on it. In order not to be put out of action itself, the spider leaves parts of the net free of sticky material. These spots are placed in such a clever way that the spider can reach every point of its net without getting caught in it itself.";
+		setTimeout(function(){$("#text").hide()},50000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},51000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
+
+

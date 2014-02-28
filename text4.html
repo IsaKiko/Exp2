@@ -1,0 +1,46 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="All animals that live on other animals face the problem of how to get hold of their prey. Many animals seek and hunt their prey, while others sit still and wait for a harmless victim to come close to them. One widely used way to get foot without too much trouble is to build a trap or net. The best known example for animals that catch other animals with the help of a net are spiders. Their sticky nets are spun so fine that they are hard to see, and usually an insect does not notice a net until it has caught itself in it. The spider then only needs to go to the place where the insect is. It is either eaten right on the spot or otherwise it is wrapped in sticky threads for later consumption. Other living things that are stuck to rocks or on the floor of the sea live on tiny animals and plants that they soak in with water.";
+		setTimeout(function(){$("#text").hide()},50000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},51000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
+
+
