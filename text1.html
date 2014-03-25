@@ -15,38 +15,34 @@
   </div>
 
   <script>
+		// instantly hide the text
+		$("#text").hide();
+		$("#imageback").hide();
+		
+	  function maintainTimer(t0,duration) {
+	  	var t1 = Date.now()/1000;
+			if ((t1 - t0) > duration) { 
+				$("#text").hide();
+				$("#imageback").show();
+	    } else {
+	    	setTimeout(function(){maintainTimer(t0,duration)},100);
+	    }
+	  }
 
-	// instantly hide the text
-	$("#text").hide();
-	$("#imageback").hide();
+		function go(){	
+			$("#text").show();
+			setTimeout(function(){$("#text").show()},500);
+			$("#image").hide();
+			document.getElementById("text").innerHTML="In a small town a greengrocer had opened a shop that was located above a deep cellar. Every night, mice came in droves out of this cellar into the shop. They ate apples and pears, grapes and nuts and did not spare the vegetables and potatoes either.";
+			var t0 = Date.now()/1000;
+			maintainTimer(t0,5); // 5 seconds
+		}
 
-    	
-      	function maintainTimer(t) {
-		document.getElementById("text").innerHTML="In a small town a greengrocer had opened a shop that was located above a deep cellar. Every night, mice came in droves out of this cellar into the shop. They ate apples and pears, grapes and nuts and did not spare the vegetables and potatoes either.";
-//		setTimeout(function(){$("#text").hide()},t+60000); //10000 = 10 seconds
-//		setTimeout(function(){$("#imageback").show()},t+61000);
-		t = setTimeout(function(){maintainTimer(t+1)},10);
-		if (t>=1000)
-  			{
-	//		$("#text").hide();
-			setTimeout(function(){$("#text").hide()},0); //10000 = 10 seconds
-			setTimeout(function(){$("#imageback").show()},1000);
-      		}
-      	}
-
-	function go(){	
-		setTimeout(function(){$("#text").show()},500);
-		$("#image").hide();
-		maintainTimer(0);
-	}
-	function goback(){	
-		window.open("index.html","_self");
-	}
-
+		function goback(){	
+			window.open("index.html","_self");
+		}
 
   </script>
-
-
 </body>
 </html>
 
